@@ -31,6 +31,7 @@ $(document).ready(function(){
         var taskList = JSON.parse(localStorage.getItem("tasks"));
 
         if(taskList != null){
+            taskList = taskList.sort(sortByDate);
             taskList = taskList.sort(sortByTime);
         }
 
@@ -55,10 +56,20 @@ $(document).ready(function(){
 
     // Function to sort tasks
     function sortByTime(a,b){
-        var aTime = a.task_time;
-        var bTime = b.task_time;
-        return ((aTime < bTime) ? -1 : ((aTime > bTime) ? 1 : 0 ));
+        if(a.task_date != b.task_date){
+            return;
+        }else{
 
+        let aTime = a.task_time;
+        let bTime = b.task_time;
+        return ((aTime < bTime) ? -1 : ((aTime > bTime) ? 1 : 0 ));
+        }
+    }
+
+    function sortByDate(a,b){
+        let aDate = a.task_date;
+        let bDate = b.task_date;
+        return ((aDate < bDate) ? -1 : ((aDate > bDate) ? 1 : 0 ));
     }
     // Function to add task
     function addTask(e){
