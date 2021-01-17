@@ -47,6 +47,7 @@ $(document).ready(function(){
                     "<td>" + value.task_date + "</td>"+
                     "<td>" + arrayDays[new Date(value.task_date).getDay()] + "</td>"+
                     "<td>" + value.task_time  + "</td>"+
+                    "<td>" + value.report + "</td>"+
                     "<td class='float-right'> <a class = 'btn btn-dark ' href ='edit.html?id="+ value.id+ "'>Edit</a>  <a href='#' class='btn btn-danger' id = 'remove-task' data-id='" +value.id +"'>Remove</a></td>" +
                     "</tr>");
             })
@@ -62,13 +63,14 @@ $(document).ready(function(){
     // Function to add task
     function addTask(e){
         // Add Unique ID
-        var newDate =new Date();
+        let newDate =new Date();
         id = newDate.getTime();
 
-        var task = $("#task").val();
-        var task_priority = $("#priority").val();
-        var task_date = $("#date").val();
-        var task_time = $("#time").val();
+        let task = $("#task").val();
+        let task_priority = $("#priority").val();
+        let task_date = $("#date").val();
+        let task_time = $("#time").val();
+        let report = $("#report").val();
 
         // Validation
         if(task == ''){
@@ -95,7 +97,8 @@ $(document).ready(function(){
                 "task" : task,
                 "task_priority" : task_priority,
                 "task_date" : task_date,
-                "task_time" : task_time
+                "task_time" : task_time,
+                "report" : report,
             }
 
             tasks.push(new_task);
@@ -112,6 +115,7 @@ $(document).ready(function(){
         var task_priority = $("#priority").val();
         var task_date = $("#date").val();
         var task_time = $("#time").val();
+        var report = $("#report").val();
       
 
         taskList = JSON.parse(localStorage.getItem('tasks'));
@@ -149,7 +153,8 @@ tasks = JSON.parse(localStorage.getItem('tasks'));
                 "task" : task,
                 "task_priority" : task_priority,
                 "task_date" : task_date,
-                "task_time" : task_time
+                "task_time" : task_time,
+                "report" : report
             }
 
             tasks.push(new_task);
