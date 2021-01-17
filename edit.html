@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+     <script src="main.js"></script>
+    <title>Edit Task</title>
+</head>
+<body onload="getTask()">
+                        <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
+       <img src="note2.png" width="60px" alt="">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+            <a class="nav-link" href="#">Daily Notes</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <a class="nav-link mr-4" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link mr-4" href="add.html">Add Entry</a>
+            </li>
+
+        </ul>
+        </nav>
+
+        <div class="container">
+            <h2 class="page-header">Edit Task</h2>
+                <!-- Form -->
+            <form action="index.html" role="form" id="edit-task-form">
+                <!-- Task -->
+                <div class="form-group">
+                  <label>שם</label>
+                  <input type="text" class="form-control" id="task" placeholder="Enter Task">
+                </div>
+                <!-- Priority -->
+                <div class="form-group">
+                  <label>סוג טיפול</label>
+                  <select class="form-control" id="priority">
+                  <option selected value="ידיים">ידיים</option>
+                  <option value="רגליים" >רגליים</option>
+                  <option value="ידיים+רגליים">ידיים+רגליים</option>
+                  <option value="ריסים" >  ריסים</option>
+                </select>
+                </div>
+                <!-- Date -->
+                <div class="form-group">
+                    <label>תאריך</label>
+                    <input type="date" class="form-control" id="date">
+                  </div>
+                  <!-- Time -->
+                  <div class="form-group">
+                    <label>שעה</label>
+                    <input type="time" class="form-control" id="time">
+                  </div>
+               
+                  <input type="hidden" value="" id="task_id">
+                <button type="submit" class="btn btn-default bg-primary text-light">Submit</button>
+              </form>
+          </div> 
+</body>
+</html>

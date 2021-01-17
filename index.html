@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+     <script src="main.js"></script>
+    <title>Daily Tasks</title>
+</head>
+<body>
+                        <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
+       <img src="note2.png" width="60px" alt="">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+            <a class="nav-link" href="index.html">Daily Notes</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <a class="nav-link mr-4" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link mr-4" href="add.html">Add Entry</a>
+            </li>
+
+        </ul>
+        </nav>
+
+        <div class="container">
+            <h2 class="page-header">My Daily Tasks</h2>
+            <table class="table table-striped" id="taskTableID">
+                <tr>
+                    <th>Task</th>
+                    <th>Priority</th>
+                    <th>Date</th>
+                    <th>Day</th>
+                    <th>Time</th>
+                </tr>
+            </table>
+            <a href="#" id="clearTasksID" class="btn btn-primary">Clear All Tasks</a>
+        </div> 
+    
+</body>
+</html>
