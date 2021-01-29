@@ -40,12 +40,12 @@ $(document).ready(function(){
 
         // Loop through and display
             $.each(taskList,function(key, value){
-            
+            let dateArr = value.task_date.split('-')
                 $("#taskTableID").append(
                     "<tr id = '"+ value.id+"'>" + 
                     "<td>" + value.task + "</td>"+
                     "<td>" + value.task_priority + "</td>" +
-                    "<td>" + value.task_date + "</td>"+
+                    "<td>" + `${dateArr[2]}-${dateArr[1]}` + "</td>"+
                     "<td>" + arrayDays[new Date(value.task_date).getDay()] + "</td>"+
                     "<td>" + value.task_time  + "</td>"+
                     "<td>" + value.report + "</td>"+
