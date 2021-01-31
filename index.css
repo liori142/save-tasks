@@ -5,3 +5,8 @@
 a{
     font-size: x-large;
 }
+
+table,tr ,td,th {
+border: 1px solid #dee2e6;
+text-align: center;
+}
