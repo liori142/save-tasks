@@ -45,11 +45,11 @@ $(document).ready(function(){
                     "<tr id = '"+ value.id+"'>" + 
                     "<td>" + value.task + "</td>"+
                     "<td>" + value.task_priority + "</td>" +
-                    "<td>" + `${dateArr[2]}-${dateArr[1]}` + "</td>"+
+                    "<td style = 'white-space: nowrap'>" + `${dateArr[2]}-${dateArr[1]}` + "</td>"+
                     "<td>" + arrayDays[new Date(value.task_date).getDay()] + "</td>"+
                     "<td>" + value.task_time  + "</td>"+
                     "<td>" + value.report + "</td>"+
-                    "<td class='float-right'> <a class = 'btn btn-dark ' href ='edit.html?id="+ value.id+ "'>Edit</a>  <a href='#' class='btn btn-danger' id = 'remove-task' data-id='" +value.id +"'>Remove</a></td>" +
+                    "<td style = 'white-space: nowrap'> <a class = 'btn btn-dark ' href ='edit.html?id="+ value.id+ "'>Edit</a>  <a href='#' class='btn btn-danger' id = 'remove-task' data-id='" +value.id +"'>Remove</a></td>" +
                     "</tr>");
             })
         }}
